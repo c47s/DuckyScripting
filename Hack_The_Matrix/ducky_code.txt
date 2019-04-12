@@ -1,0 +1,9 @@
+REM Opens Terminal on a Mac using spotlight, then prints random zeroes, ones, spaces, and P W N E Ds.
+
+DELAY 1000
+GUI SPACE
+STRING Terminal
+ENTER
+DELAY 1000
+STRING osascript -e 'tell application "System Events" to keystroke "f" using {control down, command down}'; while :; do c=0; printf "\n"; if [ $((RANDOM % 20)) -lt 19 ]; then while [ $c -lt $COLUMNS ]; do if [ $((RANDOM % 10)) -lt 7 ]; then printf " "; elif [ $((RANDOM % 2)) -eq 0 ]; then printf "0"; else printf 1; fi; let c=$c+1; done; else margin=$(((COLUMNS - 9) / 2)); d=$margin; sleep 0.1; printf "\n"; sleep 0.1; printf "\n"; sleep 0.1; while [ $d -gt 0 ]; do printf " "; let d=d-1; done; printf "P W N E D"; sleep 0.1; printf "\n"; sleep 0.1; printf "\n"; fi; sleep 0.1; done
+ENTER

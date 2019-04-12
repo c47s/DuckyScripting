@@ -1,0 +1,74 @@
+REM Opens TextEdit on a Mac using spotlight, types sixteen pages of `#', and prints it.
+
+DELAY 1000
+GUI SPACE
+STRING TextEdit
+DELAY 500
+ENTER
+DELAY 1000
+GUI N
+DELAY 500
+STRING #######
+
+GUI A
+GUI C
+GUI V
+GUI V
+GUI V
+GUI V
+GUI V
+
+GUI A
+GUI C
+GUI V
+GUI V
+GUI V
+GUI V
+GUI V
+
+GUI A
+GUI C
+GUI V
+GUI V
+GUI V
+GUI V
+GUI V
+
+GUI A
+GUI C
+GUI V
+GUI V
+
+GUI A
+GUI C
+GUI V
+GUI V
+
+GUI A
+GUI C
+GUI V
+GUI V
+
+GUI A
+GUI C
+GUI V
+GUI V
+
+GUI A
+GUI C
+GUI V
+GUI V
+
+GUI A
+GUI C
+GUI V
+GUI V
+
+GUI A
+GUI C
+GUI V
+GUI V
+
+GUI P
+DELAY 200
+ENTER

